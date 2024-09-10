@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nexo Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- INICIO DE LA BARRA DE NAVEGACION -->
+    
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>            
+                <h1 class="text-center">Ne<strong style="color: #0CC;">X</strong>oBlog</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a></li>
+                    <!-- <li class="tm-nav-item active"><a href="post.html" class="tm-nav-link">
+                        <i class="fas fa-pen"></i>
+                        Post
+                    </a></li> -->
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        Acerca de
+                    </a></li>
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contacto
+                    </a></li>
+                    
+                    <li class="tm-nav-item"> 
+                        <a id="darkModeButton" class="tm-nav-link">
+                            <i id="mode-icon" class="fas fa-moon"></i> <!-- Icono de luna/sol -->
+                            <span class="tm-nav-link" style="padding-left: 0px;" id="mode-text">Modo Oscuro</span> <!-- Texto para el botón -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    
+    <!-- FIN DE LA BARRA DE NAVEGACION -->
+    
+    <div class="container-fluid">
+        <main class="tm-main">
+            <h1 class="tm-pt-30 tm-color-primary tm-post-title" style="font-size: 50px; font-weight: bold;">POST</h1>
+            
+            <!-- Search form
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>             -->
+            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <!-- Video player 1422x800
+                    <video width="954" height="535" controls class="tm-mb-40">
+                        <source src="video/wheat-field.mp4" type="video/mp4">							  
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <div class="tm-post-link-inner">
+                        <img src="img/post-1.jpg" alt="Image" class="img-fluid">                            
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-primary tm-post-title">Principios Básicos para Programar en C#</h2>
+                            <p class="tm-mb-40">Sept. 09, 2024 posteado por Admin.</p>
+                            <hr>
+                            <h4 class="tm-color-primary">¿Qué es C#?</h4>
+                            <p>
+                                C# (pronunciado "C-Sharp") es un lenguaje de programación desarrollado por Microsoft, ampliamente utilizado para crear aplicaciones de escritorio, aplicaciones web, juegos (a través de Unity), y mucho más. Es un lenguaje versátil y moderno, que combina la simplicidad de otros lenguajes como Java con el poder de la plataforma .NET.
+                            </p>
+                            <p>
+                                En este tutorial, veremos algunos de los principios básicos que necesitas conocer para comenzar a programar en C#.
+                            </p>
+                            <hr>
+                            <h4 class="tm-color-primary">1. Instalación de las herramientas necesarias</h4>
+                            <p>
+                                Antes de escribir tu primer programa en C#, necesitas tener las herramientas adecuadas instaladas. Aquí te mostramos los pasos básicos:
+                            </p>
+                            <ol style="padding-left: 20px;" class="tm-color-gray">
+                                <li><strong>Instala Visual Studio:</strong> Es el entorno de desarrollo más utilizado para programar en C#.</li>
+                                <ol style="list-style: disc; padding-left: 40px;">
+                                    <li>Descarga Visual Studio desde <a href="https://visualstudio.microsoft.com/es/">la página oficial.</a></li>
+                                    <li>Durante la instalación, selecciona el cargador de trabajo llamado "Desarrollo de aplicaciones .NET".</li>
+                                </ol>
+                                <li><strong>.NET SDK:</strong> Visual Studio incluye el SDK de .NET, pero si prefieres otro editor, como Visual Studio Code, necesitarás instalarlo por separado desde <a href="https://dotnet.microsoft.com/es-es/download">aquí.</a>
+                                </li>    
+                            </ol>
+                            <hr>
+                            <h4 class="tm-color-primary">2. Estructura básica de un programa en C#</h4>
+                            <p>
+                                El siguiente es un ejemplo simple de un programa en C#:
+                            </p>
+                            <div class="console">
+                                <pre><code>
+<span class="keyword">using</span> <span class="type">System</span>;
+
+<span class="keyword">class</span> <span class="type">Program</span>
+{
+    <span class="keyword">static void</span> Main(<span class="type">string[]</span> args)
+    {
+        <span class="type">Console</span>.WriteLine(<span class="string">"¡Hola, mundo!"</span>);
+    }
+}
+                                </code></pre>
+                            </div>
+                            
+                            <p>Explicación:</p>
+                            <ul style="padding-left: 20px;" class="tm-color-gray">
+                                <li><strong>using System;</strong> : Esta línea indica que estamos utilizando el namespace <strong>System</strong> , el cual contiene clases fundamentales como <strong>Console</strong>.
+                                </li>
+                                <li>
+                                    <strong>class Program</strong> : Define una clase llamada <strong>Program.</strong> En C#, todo el código está contenido dentro de clases.
+                                </li>
+                                <li>
+                                    <strong>static void Main(string[] args)</strong> : Este es el punto de entrada del programa. Es el primer método que se ejecuta cuando ejecutas tu aplicación. <strong>Main</strong> es obligatorio en cada aplicación de C#.
+                                </li>
+                                <li>
+                                    <strong>Console.WriteLine("¡Hola, mundo!");</strong> : Imprime el mensaje "¡Hola, mundo!" en la consola.
+                                </li>
+                            </ul>
+                            <hr>
+                            <h4 class="tm-color-primary">3. Variables y Tipos de Datos</h4>
+                            <p>
+                                Las variables se utilizan para almacenar datos. C# es un lenguaje fuertemente tipado, lo que significa que debes declarar el tipo de cada variable.
+                            </p>
+                            <p>
+                                Ejemplo de algunos tipos de datos comunes:
+                            </p>
+                            <div class="console">
+                                <pre><code>
+<span class="string">int</span> <span class="keyword">numero</span> <span class="type">=</span> <span class="keyword"> 10;</span>          <span class="comment">// Número entero</span>
+<span class="string">double</span> <span class="keyword">decimalNum</span> <span class="type">=</span> <span class="keyword"> 5.99;</span> <span class="comment">// Número decimal</span>
+<span class="string">char </span> <span class="keyword">letra</span> <span class="type">=</span> <span class="keyword"> 'A';</span>        <span class="comment">// Caracter</span>
+<span class="string">string</span> <span class="keyword">texto</span> <span class="type">=</span> <span class="keyword"> "Hola";</span>    <span class="comment">// Cadena de texto</span>
+<span class="string">bool</span> <span class="keyword">esVerdadero</span> <span class="type">=</span> <span class="keyword"> true;</span>  <span class="comment">// Booleano (verdadero o falso)</span>
+                                </code></pre>
+                            </div>
+                            <p>Tipos de datos básicos:</p>
+                            <ul style="padding-left: 40px;" class="tm-color-gray">
+                                <li>int: Enteros (números sin decimales).</li>
+                                <li>double: Números decimales.</li>
+                                <li>char: Almacena un único carácter.</li>
+                                <li>string: Cadena de texto.</li>
+                                <li>bool: Almacena valores booleanos (<strong>true</strong> o <strong>false</strong>).</li>
+                            </ul>
+                            <hr>
+                            <h4 class="tm-color-primary">4. Estructuras de Control</h4>
+                            <p>
+                                Las estructuras de control permiten que tu programa tome decisiones y repita acciones. Vamos a ver algunos ejemplos clave.
+                            </p>
+                            <p>
+                                a) Condicionales: <strong>if</strong>, <strong>else</strong>
+                            </p>
+                            <div class="console">
+                                <pre><code>
+<span class="string">int</span> <span class="keyword">Numero</span> <span class="string">=</span> <span class="keyword">10;</span>
+
+<span class="keyword">if</span>(<span class="type">numero</span> > <span class="type">5</span>)
+{
+    Console.WriteLine(<span class="comment">"El número es mayor que 5"</span>);
+}
+<span class="keyword">else</span>
+{
+    Console.WriteLine(<span class="comment">"El número es 5 o menor"</span>);
+}
+                                </code></pre>
+                            </div>
+                            <p>b) Ciclos: <strong>for</strong>, <strong>while</strong></p>
+                            <p>Los ciclos te permiten repetir un bloque de código.</p>
+                            <p>Ejemplo de <strong>for:</strong></p>
+                            
+                            <div class="console">
+                                <pre><code>
+<span class="keyword">for </span>(<span class="string">int</span> i <span class="type">= </span><span class="keyword">0</span>; i <span class="comment"><</span> <span class="keyword">5</span>; i++)
+{
+    Console.WriteLine(<span class="comment">"El valor de i es: "</span> + i);
+}
+                                </code></pre>
+                            </div>
+                            <p>Ejemplo de while:</p>
+                            <div class="console">
+                                <pre><code>
+<span class="string">int</span> contador <span>=</span> <span class="keyword">0</span>;
+<span class="keyword">while </span>(<span class="string">contador </span> <span class="comment"><</span> <span class="keyword">5</span>)
+{
+    Console.WriteLine(<span class="comment">"Contador: "</span> + contador);
+    contador++;
+}
+                                </code></pre>
+                            </div>
+                            <hr>
+                            <h4 class="tm-color-primary">5. Métodos</h4>
+                            <p>Los métodos son bloques de código que realizan una tarea específica. Puedes reutilizar los métodos en todo el programa.</p>
+                            <p>Ejemplo básico de un método en C#:</p>
+                            <div class="console">
+                                <pre><code>
+<span class="keyword">class</span> <span class="type">Program</span>
+{
+    <span class="keyword">static void</span> Main(<span class="type">string[]</span> args)
+    {
+        saludar(<span class="comment">"Carlos"</span>);
+    }
+    <span class="keyword">static void</span> Saludar(<span class="type">string</span> nombre)
+    }
+    <span class="type">Console</span>.WriteLine(<span class="comment">"¡Hola, "</span>+ nombre + <span class="comment">"!"</span>);
+}
+                                </code></pre>
+                            </div>
+                            <p>
+                                En este caso, el método <strong>Saludar</strong> toma un parámetro (<strong>string nombre</strong>) y lo utiliza para imprimir un saludo en la consola.
+                            </p>
+                            <hr>
+                            <h4 class="tm-color-primary">6. Clases y Objetos</h4>
+                            <p>
+                                C# es un lenguaje orientado a objetos, lo que significa que puedes crear clases que representan objetos del mundo real.
+                            </p>
+                            <p>
+                                Ejemplo básico:
+                            </p>
+                            <div class="console">
+                                <pre><code>
+<span class="keyword">class</span> <span class="type">Coche</span>
+{
+    <span class="keyword">public</span> <span class="string">string</span> marca;
+    <span class="keyword">public</span> <span class="string">string</span> modelo;
+    
+    <span class="keyword">public void</span> <span class="type">MostrarInfo</span>()
+    {
+        <span class="type">Console</span>.WriteLine(<span class="comment">"Marca: "</span>+ marca + <span class="comment">"Modelo: "</span>+ modelo);
+    }
+}
+
+<span class="keyword">class</span> <span class="type">Program</span>
+{
+    <span class="keyword">static void</span> <span class="type">Main</span>(<span class="string">string</span>[] args)
+    {
+        Coche miCoche = <span class="keyword">new</span> Coche();
+        miCoche.marca = <span class="comment">"Toyota"</span>;
+        miCoche.modelo = <span class="comment">"Corolla"</span>;
+        miCoche.MostrarInfo();
+    }
+}
+                                </code></pre>
+                            </div>
+                            <p>
+                                Aquí hemos creado una clase llamada <strong>Coche</strong> con dos propiedades (<strong>marca</strong> y <strong>modelo</strong>) y un método (<strong>MostrarInfo</strong>). Luego, en <strong>Main</strong>, creamos un objeto de tipo <strong>Coche</strong> y mostramos su información.
+                            </p>
+                            <hr>
+                            <h4 class="tm-color-primary">7. Manejo de Errores: <strong>try</strong>, <strong>catch</strong></h4>
+                            <p>
+                                El manejo de errores en C# se realiza con bloques <strong>try</strong> y <strong>catch</strong>. Esto permite capturar y manejar excepciones de manera controlada.
+                            </p>
+                            <p>
+                                Ejemplo:
+                            </p>
+                            <div class="console">
+                                <pre><code>
+<span class="keyword">try</span>
+{
+    <span class="string">int</span> numero = <span class="string">int</span>.Parse(<span class="comment">"abc"</span>);
+{
+<span class="keyword">catch</span>(FormatException ex);
+}
+    <span class="type">Console</span>.WriteLine(<span class="comment">"Error de formato: "</span> + ex.Message);
+}
+                                </code></pre>
+                            </div>
+                            <hr>
+                            <h4 class="tm-color-primary">Conclusión</h4>
+                            <p>
+                                Estos son los fundamentos básicos para empezar a programar en C#. Con esta base, puedes comenzar a explorar aspectos más avanzados del lenguaje, como el manejo de bases de datos, interfaces gráficas, o programación orientada a objetos más profunda.
+                            </p>
+                            <p>
+                                Recuerda que la clave para aprender a programar es la práctica. ¡Así que manos a la obra y empieza a experimentar con C#!.
+                            </p>
+                            <hr><br><br>
+                            <span class="d-block text-right tm-color-primary">Programacion en C#, Tutorial C#, Curso básico C#</span>
+                        </div>
+                        
+                        <!-- Comments -->
+                        <!-- <div>
+                            <h2 class="tm-color-primary tm-post-title">Comments</h2>
+                            <hr class="tm-hr-primary tm-mb-45">
+                            <div class="tm-comment tm-mb-45">
+                                <figure class="tm-comment-figure">
+                                    <img src="img/comment-1.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                    <figcaption class="tm-color-primary text-center">Mark Sonny</figcaption>
+                                </figure>
+                                <div>
+                                    <p>
+                                        Praesent aliquam ex vel lectus ornare tritique. Nunc et eros
+                                        quis enim feugiat tincidunt et vitae dui. Nullam consectetur
+                                        justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus 
+                                        sapien vel, euismod turpis.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#" class="tm-color-primary">REPLY</a>
+                                        <span class="tm-color-primary">June 14, 2020</span>
+                                    </div>                                                 
+                                </div>                                
+                            </div>
+                            <div class="tm-comment-reply tm-mb-45">
+                                <hr>
+                                <div class="tm-comment">
+                                    <figure class="tm-comment-figure">
+                                        <img src="img/comment-2.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>    
+                                    </figure>
+                                    <p>
+                                        Nunc et eros quis enim feugiat tincidunt et vitae dui.
+                                        Nullam consectetur justo ac ex laoreet rhoncus. Nunc
+                                        id leo pretium, faucibus sapien vel, euismod turpis.
+                                    </p>
+                                </div>                                
+                                <span class="d-block text-right tm-color-primary">June 21, 2024</span>
+                            </div>
+                            <form action="" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Tus comentarios</h2>
+                                <div class="mb-4">
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div> -->
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="mb-4 tm-post-title tm-color-primary">Categorias</h2>
+                        <ul class="tm-mb-75 pl-5 tm-category-list">
+                            <li><a href="#" class="tm-color-primary">Visual Designs</a></li>
+                            <li><a href="#" class="tm-color-primary">Travel Events</a></li>
+                            <li><a href="#" class="tm-color-primary">Web Development</a></li>
+                            <li><a href="#" class="tm-color-primary">Video and Audio</a></li>
+                            <li><a href="#" class="tm-color-primary">Etiam auctor ac arcu</a></li>
+                            <li><a href="#" class="tm-color-primary">Sed im justo diam</a></li>
+                        </ul>
+                        
+                        <!-- <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Posts relacionados</h2>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-02.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Duis mollis diam nec ex viverra scelerisque a sit</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-05.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Integer quis lectus eget justo ullamcorper ullamcorper</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="img/img-06.jpg" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary">Nam lobortis nunc sed faucibus commodo</figcaption>
+                            </figure>
+                        </a> -->
+                    
+                    </div>                    
+                </aside>
+            </div>
+            <hr>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: EdiCastel.
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2024 NeXoBlog.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
